@@ -1,6 +1,13 @@
 import sys
 
 #Mismatch penalty
+'''
+ |A   |C   |G   |T
+A|0   |110 |48  |94
+C|110 |0   |118 |48
+G|48  |118 |0   |110
+T|94  |48  |110 |0
+'''
 alpha = [[0, 110, 48, 94],
          [110, 0, 118, 48],
          [48, 118, 0, 110],
@@ -26,7 +33,7 @@ def inputGeneration(inputFile):
     for i in range(1, len(inputLineSep)):
         if s2 == "":
             if inputLineSep[i].isalpha():
-                s2 = inputLineSep[i];
+                s2 = inputLineSep[i]
             if inputLineSep[i].isdigit():
                 s1 = stringInsert(s1, s1, int(inputLineSep[i]) + 1)
         if inputLineSep[i].isdigit():
